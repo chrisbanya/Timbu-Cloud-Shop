@@ -1,0 +1,62 @@
+.totalCardWrapper {
+  width: 90%;
+  border-top: 2px dashed #D6D6D6;
+}
+
+.totalCard {
+  padding: 0.5rem 1.5rem;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.totalItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+}
+
+.totalInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.otherText {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  color: #565656;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 800;
+  color: black;
+}
+
+.otherPrice {
+  font-family: 'Lemonada';
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.prices {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+.price {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8F8F8F;
+}

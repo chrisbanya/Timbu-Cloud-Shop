@@ -1,0 +1,104 @@
+.shop-card-container {
+  /* width: 1230px; */
+  /* margin: 0 auto; */
+
+  display: flex;
+  align-items: center;}
+
+.shop-cards {
+  display: flex;
+  /* overflow: hidden; */
+  flex-wrap: nowrap;
+  /* overflow: scroll; */
+  gap: 2.5rem;
+  transform: scale(0.5);
+  padding: 1rem 0 1rem 1rem;
+  position: relative;
+  right: 360px;
+  bottom: 80px;
+}
+.shop-card::-webkit-scrollbar {
+  display: none;
+}
+.cards {
+  height: 320px;
+  width: 240px;
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .card {
+  transform: scale(0.5);
+}
+
+.firstItem {
+  transform: scale(1);
+} */
+
+.productImage {
+  position: relative;
+  left: -58px;
+  /* z-index: 3; */
+  /* padding: 2rem 0 1rem 0; */
+  /* right: 75px; */
+  /* padding: 2rem; */
+}
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: max-content;
+}
+
+.product-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  /* padding-right: 2rem; */
+}
+.product-name {
+  font-size: 24px;
+  font-weight: 500;
+  width: max-content;
+}
+.product-brand {
+  font-size: 18px;
+  font-weight: 500;
+}
+.product-price {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+  .shop-card {
+      align-items: center;
+  }
+
+  .shop-card-container {
+      width: 100%;
+  }
+  
+}
+
+.detailsIcons {
+  display: flex;
+  flex-direction: column;
+  /* padding-right: 16rem; */
+  /* padding-bottom: 8rem; */
+  /* justify-content: center; */
+}
+.sizeIcon { 
+  display: flex;
+  justify-content: center;
+}
+.addCartIcon {
+  display: flex;
+  justify-content: center;
+  padding-right: 1.7rem;
+
+
+}

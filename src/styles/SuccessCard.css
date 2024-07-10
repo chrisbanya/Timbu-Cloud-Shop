@@ -1,0 +1,45 @@
+.successCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 667px;
+}
+
+.thumbEmoji {
+ width: 198px;
+ height: 198px;
+ 
+ /* padding: 2rem 1rem; */
+ /* margin-top: 2rem; */
+}
+.successCardContainer h2 {
+  font-family: 'Lemonada';
+  font-size: 64px;
+  font-weight: 700;
+  /* line-height: 127.87px; */
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  
+}
+.successCardContainer h3 {
+  font-family: 'Outfit';
+font-size: 40px;
+font-weight: 500;
+/* line-height: 50.4px; */
+text-align: center;
+color: #8F8F8F;
+margin: 20px;
+}
+.exploreBtn {
+  background-color: #000000;
+  box-shadow: 0px 12px 16px 0px #00000033;
+  color: white;
+  padding: 20px 16px;
+  border-radius: 16px;
+  width: 226px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}

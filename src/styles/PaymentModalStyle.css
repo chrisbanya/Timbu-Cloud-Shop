@@ -1,0 +1,130 @@
+.radioContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.cardInput:focus {
+  border-bottom: 1px solid #8F8F8F;
+}
+
+.header-text {
+  color: #8F8F8F;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.radioWrapper h3 {
+  color: #8F8F8F;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-left: 0.5rem;
+
+}
+
+.cardHolderInput {
+  display: flex;
+  flex-direction: column;
+  color: #8F8F8F;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 1.5rem 0;
+
+}
+
+.cardInput {
+  width: 438px;
+}
+
+.cvInput,
+.expiryInput {
+  width: 187.5px;
+}
+
+.cardInput[type=number]::-webkit-inner-spin-button,
+.cvInput[type=number]::-webkit-inner-spin-button,
+.expiryInput[type=number]::-webkit-inner-spin-button,
+.cardInput[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cardInput,
+.expiryInput,
+.cvInput {
+  border: none;
+  border-bottom: 1px solid #8F8F8F;
+  outline: none;
+  padding: 1.5rem 0 0.5rem 0;
+
+}
+
+.paymentDetailsWrapper {
+  padding: 24px 16px;
+  box-shadow: 0px 6px 16px 0px #0000001A;
+  border-radius: 16px;
+  width: 450px;
+}
+
+.expCvLabel {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 2rem;
+
+}
+
+.expCvInput {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cvLabel {
+  margin: 0 10px;
+  align-self: flex-start;
+}
+
+.expCvContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn {
+  background-color: #000000;
+  box-shadow: 0px 12px 16px 0px #00000033;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 16px;
+  width: 226px;
+  display: flex;
+  font-size: 24px;
+  font-weight: 500;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}

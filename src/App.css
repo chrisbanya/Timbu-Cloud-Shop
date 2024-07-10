@@ -1,0 +1,160 @@
+
+.AppWrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+:-webkit-scrollbar {
+  display: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  position: relative;
+  right: 41px;
+  bottom: 15px;
+  font-family: "Outfit";
+  font-size: 19.9px;
+  font-weight: 700;
+  padding: 0 2px 0 0;
+}
+
+.logoText2 {
+  margin-left: 4px;
+}
+
+.productPictures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.shoe {
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+  border-radius: 2rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.image {
+  height: 100px;
+  width: 100px;
+}
+
+.shoeInfo {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.navbar {
+  display: flex;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  width: 1238px;
+  /* height: 93px; */
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+@media screen and (max-width: 480px){
+  .navbar{
+      width: 80%;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  padding: 8px 24px;
+}
+
+.link {
+  padding: 8px 24px;
+  color: #8F8F8F;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.link.active {
+  color: white;
+}
+
+hr.active {
+  width: 40%;
+  background-color: white;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.feature {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.feature-container {
+  display: flex;
+}
+
+.feature-container h1 {
+  color: #000000;
+  font-size: 62px;
+  font-weight: 500;
+  margin: 0;
+  width: max-content;
+  padding: 4rem 0 1rem 0;
+}
+
+.feature-container p {
+  color: #565656;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
+  padding: 1rem 0 2rem 0;
+}
+
+.feature-image {
+  padding-top: 1rem;
+}
+
+.btn {
+  background-color: #000000;
+  box-shadow: 0px 12px 16px 0px #00000033;
+  color: white;
+  padding: 20px 16px;
+  border-radius: 16px;
+  width: 226px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.shadow-image {
+  position: relative;
+  bottom: 130px;
+  left: 90px;
+  z-index: -1;
+}
+
+.submitBtn {
+  background-color: #000000;
+  box-shadow: 0px 12px 16px 0px #00000033;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 16px;
+  width: 226px;
+  font-size: 24px;
+  font-weight: 500;
+}
