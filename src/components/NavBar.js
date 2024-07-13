@@ -1,81 +1,66 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { SearchIcon, LikeIcon, CartIcon } from '../components/SVG'
 import Shape from '../assets/shape.png'
 
-const NavBar = () => {
+const Navbar = () => {
+    const [showLinks, setShowLinks] = useState(false);
+    const linksContainerRef = useRef(null);
+    const linksRef = useRef(null);
+    const [iconClicked, setIconClicked] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const [isOpen, setIsOpen] = useState(false);
-    const [iconClicked, setIconClicked] = useState(false);
-
-    // const isActive = (path) => location.pathname.includes(path);
     const isActive = (paths) => paths.includes(location.pathname);
 
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 768);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    const toggleLinks = () => {
+        setShowLinks(!showLinks);
+    };
 
-    const toggleMenu = () => setIsOpen(!isOpen);
+    useEffect(() => {
+        const linksHeight = linksRef.current.getBoundingClientRect().height;
+        if (showLinks) {
+            linksContainerRef.current.style.height = `${linksHeight}px`;
+        } else {
+            linksContainerRef.current.style.height = '';
+        }
+    }, [showLinks]);
+
 
     return (
-        <div className='navbar'>
-            <div className='logo-container'>
-                <div>
-                    <img src={Shape} alt="logo" />
-                    <span className='logoText'>Just <span className='logoText2'>Shoes</span></span>
+        <nav>
+            <div className='nav-center'>
+                <div className='nav-header'>
+                    <div className='logo-container'>
+                        <img src={Shape} alt="logo" />
+                        <span className='logoText'>Just <span className='logoText2'>Shoes</span></span>
+                    </div>
+                    <button className='nav-toggle'>
+                        {showLinks ? <span onClick={toggleLinks}>✕</span> : <div className='DashBtn'><span onClick={() => navigate('/cart')}><CartIcon /></span><span onClick={toggleLinks}>☰</span> </div>}
+                    </button>
                 </div>
-            </div>
-            {isMobile ? (
-                <div className='mobile-menu-icon' onClick={toggleMenu}>
-                    {isOpen ? '✕' : '☰'}
-                </div>
-            ) : (
-                <>
-                    <div className='links'>
-                        <div className={`link ${isActive(['/', '/cart', '/details']) ? 'active' : ''}`} onClick={() => { navigate('/'); setIsOpen(false); }}>
+                <div className='links-container' ref={linksContainerRef}>
+
+                    <div className='links' ref={linksRef}>
+                        <div className={`link ${isActive(['/', '/cart', '/details']) ? 'active' : ''}`} onClick={() => { navigate('/'); }}>
                             Home
                             {isActive(['/', '/cart', '/details']) && <hr className='active' />}
                         </div>
-                        <div className={`link ${isActive(['/shop']) ? 'active' : ''}`} onClick={() => { navigate('/shop'); setIsOpen(false); }}>
+                        <div className={`link ${isActive(['/shop']) ? 'active' : ''}`} onClick={() => { navigate('/shop'); }}>
                             Shop
                             {isActive(['/shop']) && <hr className='active' />}
                         </div>
-                        <div className={`link ${isActive(['/contact']) ? 'active' : ''}`} onClick={() => { navigate('/contact'); setIsOpen(false); }}>
+                        <div className='link'>
                             Contact
-                            {isActive(['/contact']) && <hr className='active' />}
                         </div>
                     </div>
-
-                    <div className='icons'>
-                        <div><SearchIcon /></div>
-                        <div onClick={() => navigate('/cart')}><CartIcon /></div>
-                        <div onClick={() => setIconClicked(!iconClicked)}><LikeIcon iconClicked={iconClicked} /></div>
-                    </div>
-                </>
-            )}
-            {isMobile && isOpen && (
-                <div className='mobile-links'>
-                    <div className={`link ${isActive('/') ? 'active' : ''}`} onClick={() => { navigate('/'); setIsOpen(false); }}>
-                        Home
-                        {isActive('/') && <hr className='active' />}
-                    </div>
-                    <div className={`link ${isActive('/shop') ? 'active' : ''}`} onClick={() => { navigate('/shop'); setIsOpen(false); }}>
-                        Shop
-                        {isActive('/shop') && <hr className='active' />}
-                    </div>
-                    <div className={`link ${isActive('/contact') ? 'active' : ''}`} onClick={() => { navigate('/contact'); setIsOpen(false); }}>
-                        Contact
-                        {isActive('/contact') && <hr className='active' />}
-                    </div>
                 </div>
-            )}
-
-        </div>
-    )
-}
-
-export default NavBar
+                <div className='social-icons'>
+                    <div><SearchIcon /></div>
+                    <div onClick={() => navigate('/cart')}><CartIcon /></div>
+                    <div onClick={() => setIconClicked(!iconClicked)}><LikeIcon iconClicked={iconClicked} /></div>
+                </div>
+            </div>
+        </nav>
+    );
+};
+export default Navbar;

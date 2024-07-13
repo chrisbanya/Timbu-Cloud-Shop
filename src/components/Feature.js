@@ -9,7 +9,7 @@ const Feature = () => {
     return (
         <div className='feature'>
             <div className='feature-container'>
-                <div>
+                <div className='textContainer'>
                     <h1>Upgrade Your <br />Collections</h1>
                     <p>Sum extra dummy text goes here like so.</p>
                     <button className='btn' onClick={() => navigate('/shop')}>Shop Now</button>

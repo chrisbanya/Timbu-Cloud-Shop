@@ -1,4 +1,4 @@
-import react from 'react'
+// import react from 'react'
 import myImage from '../assets/Image (3).png';
 import '../styles/SuccessCard.css'
 

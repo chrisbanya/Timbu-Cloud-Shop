@@ -1,27 +1,27 @@
   .contactContainer {
-  display: flex;
-  gap: 89px;
-  color: #8F8F8F;
-  /* opacity: 0px; */
-  justify-content: center;
+      display: flex;
+      gap: 89px;
+      color: #8F8F8F;
+      justify-content: center;
+      flex-wrap: wrap;
   }
-  
+
   .contactUs {
       margin-bottom: 20px;
   }
-  
-  
-  
+
+
+
   .contactUs p {
       text-align: center;
-      font-family: 'Outfit';
+      /* font-family: 'Outfit'; */
       font-size: 64px;
       font-weight: 500;
       line-height: 80.64px;
       color: #000000;
       margin-top: 0;
   }
-  
+
   .contactWrapper {
       display: flex;
       flex-direction: column;
@@ -29,7 +29,7 @@
       padding: 0 8px;
       border: 1px 0 0 0;
   }
-  
+
   .inputInfo {
       display: flex;
       flex-direction: column;
@@ -39,25 +39,101 @@
       color: #8F8F8F;
       font-size: 24px;
       ;
-  
+
   }
+
   .inputBox {
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 2px solid #8F8F8F;
-  resize: none;
-  
-  
+      padding: 1rem;
+      margin: 1rem 0;
+      border: 2px solid #8F8F8F;
+      resize: none;
+
+
   }
-  
+
   textarea {
       border: 2px solid #8F8F8F;
-  
+
   }
+
   .messageWrapper {
       display: flex;
       flex-direction: column;
       font-size: 24px;
-  
-      
+
+
   }
+
+  /* tablets */
+  @media (min-width: 769px) and (max-width: 1023px) {
+   
+      .contactUs {
+          margin-left: 2rem;
+      }
+
+      .contactWrapper {
+          flex-direction: row;
+            gap: 3rem;
+      }
+
+      .messageWrapper {
+          position: relative;
+          right: 7rem;
+      }
+      .inputBox {
+        width: 20rem;
+      }
+      .contactUs p {
+        font-size: 48px;
+        margin-left: 2rem;
+      }
+      .messageWrapper textarea {
+        width: 30rem;
+      }
+      
+
+
+
+
+
+
+
+
+
+  }
+
+  /* mobile */
+  @media (max-width: 768px) {
+      .contactUs {
+          margin-top: 0;
+          margin-left: 0.25rem;
+          position: relative;
+          bottom: 16rem;
+      }
+
+      .contactContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 5rem 1rem;
+          padding-top: 2rem;
+
+      }
+      
+
+      .inputBox {
+          width: 20rem;
+          padding: 1rem 1rem;
+      }
+
+      .contactUs p {
+          margin: 0;
+          text-align: left;
+          font-size: 50px;
+          padding-left: 1rem;
+      }
+      .messageWrapper {
+        position: relative;
+        right: 1px;
+  }
+}

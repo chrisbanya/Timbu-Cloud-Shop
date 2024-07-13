@@ -1,4 +1,4 @@
-.shop-card-container {
+/* .shop-card-container {
   width: 1230px;
   margin: 0 auto;
 }
@@ -26,10 +26,7 @@
 .productImage {
   position: relative;
   left: -58px;
-  /* z-index: 3; */
-  /* padding: 2rem 0 1rem 0; */
-  /* right: 75px; */
-  /* padding: 2rem; */
+
 }
 .productInfo {
   display: flex;
@@ -43,7 +40,7 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  /* padding-right: 2rem; */
+  
 }
 .product-name {
   font-size: 24px;
@@ -59,16 +56,6 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 480px) {
-  .shop-card {
-      align-items: center;
-  }
-
-  .shop-card-container {
-      width: 100%;
-  }
-  
-}
 .scContainer, .scTwoContainer {
   display: flex;
   gap: 2rem;
@@ -85,4 +72,325 @@
   font-weight: 100;
   font-size: 18px;
 
+} */
+
+/* ShopCard.css */
+
+/* .scContainer, .scTwoContainer {
+  display: flex;
+  gap: 2rem;
+  padding-left: 7rem;
+}
+
+.popText, .bothText {
+  font-weight: 500;
+  font-family: 'Outfit';
+  font-size: 18px;
+}
+
+.newReText, .maleText, .femaleText {
+  font-family: 'Outfit';
+  color: #8F8F8F;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.shop-card-container {
+  width: 1230px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.shop-card {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  gap: 2.5rem;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.shop-card::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  height: 320px;
+  width: 240px;
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.productImage {
+  position: relative;
+  left: -58px;
+
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: max-content;
+}
+
+.product-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: 500;
+  width: max-content;
+}
+
+.product-brand {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-btn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+  background-color: #0056b3;
+}
+
+.pagination-btn:focus {
+  outline: none;
+  background-color: #004494;
+} */
+
+/* ShopCard.css */
+
+.scContainer, .scTwoContainer {
+  display: flex;
+  gap: 2rem;
+  padding-left: 7rem;
+}
+
+.popText, .bothText {
+  font-weight: 500;
+  font-family: 'Outfit';
+  font-size: 18px;
+}
+
+.newReText, .maleText, .femaleText {
+  font-family: 'Outfit';
+  color: #8F8F8F;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.shop-card-container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-card {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.card {
+  height: 320px;
+  width: 240px;
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: #f8f8f8;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.productImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative;
+  left: -58px;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  width: max-content;
+}
+
+.product-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: 500;
+  width: max-content;
+}
+
+.product-brand {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-btn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+  background-color: #0056b3;
+}
+
+.pagination-btn:focus {
+  outline: none;
+  background-color: #004494;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .shop-card-container {
+    padding: 0 1rem;
+  }
+
+  .card {
+    width: 220px;
+    height: 300px;
+    padding: 1rem;
+  }
+
+  .productImage {
+    width: 90px;
+    height: 90px;
+    left: -48px;
+  }
+
+  .product-name {
+    font-size: 20px;
+  }
+
+  .product-brand, .product-price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-card {
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 180px;
+    height: 260px;
+    padding: 0.8rem;
+  }
+
+  .productImage {
+    width: 80px;
+    height: 80px;
+    left: -38px;
+  }
+
+  .product-name {
+    font-size: 18px;
+  }
+
+  .product-brand, .product-price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-card {
+    gap: 1rem;
+  }
+
+  .card {
+    width: 160px;
+    height: 240px;
+    padding: 0.6rem;
+  }
+
+  .productImage {
+    width: 70px;
+    height: 70px;
+    left: -28px;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .product-brand, .product-price {
+    font-size: 12px;
+  }
 }
